@@ -5,243 +5,531 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>肖女士</title>
     <meta name="keywords" content="肖女士,独立站,外贸独立站,海外数字营销,SEO,Google Ads" />
-    <meta name="description" content="十余年营销推广实战经验，专注于出海独立站运营与全球化搜索引擎优化。" />
-    
+    <meta name="description" content="十余年营销推广实战经验，专注于出海独立站运营与全球化搜索增长。" />
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --primary-dark: #0f172a;
-            --ocean-blue: #0ea5e9;
-            --tech-purple: #8b5cf6;
-            --accent-gold: #fbbf24;
-            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            --glass-bg: rgba(255, 255, 255, 0.95);
+            --primary-dark: #162033;
+            --primary-text: #243447;
+            --secondary-text: #66758a;
+            --ocean-blue: #4aa3d8;
+            --soft-blue: #eaf5fb;
+            --soft-cyan: #f3f9fc;
+            --mist-purple: #8d88c7;
+            --soft-purple: #f5f3fb;
+            --light-bg: #f5f8fb;
+            --card-bg: rgba(255, 255, 255, 0.96);
+            --line: #e6edf4;
+            --line-strong: #d8e5f0;
+            --shadow-soft: 0 18px 45px rgba(22, 32, 51, 0.07);
+            --shadow-hover: 0 20px 48px rgba(74, 163, 216, 0.12);
         }
 
+        * { box-sizing: border-box; }
+
         body {
-            background: #f0f4f8;
-            color: #334155;
+            margin: 0;
+            color: var(--primary-text);
             font-family: 'Inter', 'PingFang SC', system-ui, sans-serif;
-            background-image: radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.1) 0, transparent 50%), 
-                              radial-gradient(at 50% 0%, rgba(139, 92, 246, 0.1) 0, transparent 50%);
-            padding: 40px 0;
+            background:
+                radial-gradient(at 0% 0%, rgba(74,163,216,0.08) 0, transparent 42%),
+                radial-gradient(at 100% 0%, rgba(141,136,199,0.08) 0, transparent 34%),
+                linear-gradient(180deg, #f7fafc 0%, #f3f7fb 100%);
+            padding: 34px 0 60px;
+        }
+
+        a { text-decoration: none; }
+
+        .btn-print {
+            position: fixed;
+            right: 28px;
+            top: 28px;
+            z-index: 999;
+            background: linear-gradient(135deg, var(--primary-dark), #2a3952);
+            color: white;
+            border: none;
+            padding: 14px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 12px 28px rgba(22, 32, 51, 0.16);
+            cursor: pointer;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .btn-print:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 32px rgba(22, 32, 51, 0.2);
         }
 
         .resume-wrapper {
-            max-width: 960px;
+            max-width: 980px;
             margin: 0 auto;
-            background: var(--glass-bg);
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            background: var(--card-bg);
+            border-radius: 28px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: var(--shadow-soft);
+            backdrop-filter: blur(12px);
         }
 
-        /* 头部：出海星空感 */
         .hero-header {
-            background: var(--primary-dark);
-            background-image: url('https://www.transparenttextures.com/patterns/stardust.png'), var(--bg-gradient);
-            padding: 60px 40px;
+            background: linear-gradient(135deg, #1a2436 0%, #26364d 55%, #1c283d 100%);
+            padding: 56px 44px 42px;
             color: white;
-            text-align: center;
             position: relative;
+            overflow: hidden;
+        }
+
+        .hero-header::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            right: -90px;
+            top: -110px;
+            background: radial-gradient(circle, rgba(106,197,233,0.18), transparent 66%);
+        }
+
+        .hero-header::after {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            left: -90px;
+            bottom: -120px;
+            background: radial-gradient(circle, rgba(141,136,199,0.18), transparent 68%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 999px;
+            font-size: 0.88rem;
+            margin-bottom: 18px;
+            color: rgba(255,255,255,.92);
         }
 
         .hero-header h1 {
-            font-size: 3.5rem;
+            font-size: 3.4rem;
             font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
-            background: linear-gradient(to right, #fff, var(--ocean-blue));
+            letter-spacing: -1.4px;
+            margin-bottom: 12px;
+            background: linear-gradient(to right, #ffffff, #d7f1ff 54%, #e4e0ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        .hero-subtitle {
+            max-width: 760px;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1.03rem;
+            line-height: 1.9;
+            margin-bottom: 28px;
+        }
+
         .header-meta {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 25px;
             flex-wrap: wrap;
+            gap: 14px;
         }
 
         .meta-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             background: rgba(255, 255, 255, 0.1);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            transition: all 0.3s ease;
+            color: rgba(255,255,255,.94);
         }
-        .meta-item:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
 
-        /* 内容板块 */
-        .content-body { padding: 40px 50px; }
+        .meta-item:hover {
+            background: rgba(255, 255, 255, 0.16);
+            transform: translateY(-2px);
+        }
+
+        .content-body {
+            padding: 42px 46px 46px;
+        }
+
+        .section-block + .section-block {
+            margin-top: 46px;
+        }
 
         .section-tag {
             display: inline-block;
-            background: linear-gradient(90deg, var(--ocean-blue), var(--tech-purple));
+            background: linear-gradient(90deg, var(--ocean-blue), var(--mist-purple));
             color: white;
-            padding: 4px 16px;
-            border-radius: 4px;
-            font-size: 0.8rem;
+            padding: 5px 14px;
+            border-radius: 999px;
+            font-size: 0.78rem;
             font-weight: 700;
             margin-bottom: 10px;
+            letter-spacing: .06em;
             text-transform: uppercase;
         }
 
         .section-title {
-            font-size: 1.75rem;
+            font-size: 1.8rem;
             font-weight: 800;
             color: var(--primary-dark);
-            margin-bottom: 30px;
+            margin-bottom: 22px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
+            letter-spacing: -0.02em;
         }
 
-        .section-title i { color: var(--ocean-blue); }
+        .section-title i {
+            color: var(--ocean-blue);
+        }
 
-        /* 时间轴 */
+        .intro-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fbfd 100%);
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 28px 30px;
+            box-shadow: 0 10px 30px rgba(22, 32, 51, 0.04);
+        }
+
+        .intro-card p {
+            margin: 0;
+            font-size: 1.04rem;
+            line-height: 1.95;
+            color: #4e5f74;
+        }
+
+        .intro-card strong {
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+
         .timeline {
-            border-left: 3px solid #e2e8f0;
-            margin-left: 10px;
-            padding-left: 30px;
             position: relative;
+            padding-left: 28px;
+            margin-left: 8px;
+            border-left: 2px solid var(--line-strong);
         }
 
-        .timeline-item { position: relative; margin-bottom: 40px; }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 22px;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 24px 24px 22px;
+            box-shadow: 0 10px 28px rgba(22, 32, 51, 0.04);
+        }
+
+        .timeline-item:last-child { margin-bottom: 0; }
 
         .timeline-item::before {
             content: "";
             position: absolute;
-            left: -38.5px;
-            top: 5px;
+            left: -39px;
+            top: 28px;
             width: 14px;
             height: 14px;
             border-radius: 50%;
             background: var(--ocean-blue);
             border: 3px solid white;
-            box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.2);
+            box-shadow: 0 0 0 5px rgba(74, 163, 216, 0.15);
+        }
+
+        .exp-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
         }
 
         .exp-date {
             font-weight: 700;
             color: var(--ocean-blue);
             font-size: 0.9rem;
-            margin-bottom: 5px;
+            letter-spacing: .03em;
         }
 
         .exp-company {
-            font-size: 1.25rem;
+            font-size: 1.18rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            line-height: 1.5;
+        }
+
+        .badge-soft {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: #eef7fc;
+            color: #3f89bb;
+            border: 1px solid #d9ebf6;
+        }
+
+        .timeline-item ul {
+            margin: 14px 0 0;
+            padding-left: 18px;
+            color: #66758a;
+            line-height: 1.85;
+        }
+
+        .skill-card {
+            padding: 24px;
+            border-radius: 22px;
+            border: 1px solid var(--line);
+            background: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 28px rgba(22, 32, 51, 0.04);
+            height: 100%;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: #d4e8f3;
+        }
+
+        .skill-card.blue { background: linear-gradient(135deg, #ffffff 0%, #f5fbfe 100%); }
+        .skill-card.purple { background: linear-gradient(135deg, #ffffff 0%, #f8f6fc 100%); }
+        .skill-card.gold { background: linear-gradient(135deg, #ffffff 0%, #fcfaf5 100%); }
+        .skill-card.dark {
+            background: linear-gradient(135deg, #1b273b 0%, #162033 100%);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .skill-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .icon-box-new {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            background: white;
+            box-shadow: 0 6px 14px rgba(22, 32, 51, 0.08);
+            flex-shrink: 0;
+        }
+
+        .skill-card.dark .icon-box-new {
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
+
+        .skill-card h4 {
+            margin: 0;
+            font-size: 1.08rem;
             font-weight: 700;
             color: var(--primary-dark);
         }
 
-        /* 技能卡片 */
-        .skill-card {
-            padding: 24px;
-            border-radius: 20px;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .skill-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 12px 20px -5px rgba(0,0,0,0.1);
-        }
-        .icon-box-new {
-            width: 48px; height: 48px;
-            background: white;
-            border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.4rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-        }
-        .skill-tags .badge { 
-            font-weight: 500; 
-            font-size: 0.75rem; 
-            padding: 6px 10px !important; 
-            border-radius: 6px !important; 
-            margin-right: 4px;
+        .skill-card.dark h4,
+        .skill-card.dark p { color: white; }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 14px;
         }
 
-        /* 站群板块：精美卡片布局 */
+        .skill-tags .badge {
+            font-weight: 500;
+            font-size: 0.76rem;
+            padding: 7px 10px !important;
+            border-radius: 9px !important;
+            border: 1px solid #dde7ef;
+            background: rgba(255, 255, 255, 0.92);
+            color: #415166;
+        }
+
+        .skill-card.dark .skill-tags .badge {
+            background: rgba(255, 255, 255, 0.08);
+            color: rgba(255,255,255,.9);
+            border-color: rgba(255,255,255,.12);
+        }
+
+        .skill-card p {
+            color: #66758a;
+            line-height: 1.75;
+            margin-bottom: 0;
+            font-size: 0.94rem;
+        }
+
         .site-card {
             background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 20px;
-            text-decoration: none !important;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px;
             display: flex;
             flex-direction: column;
             height: 100%;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 26px rgba(22, 32, 51, 0.04);
         }
 
         .site-card:hover {
-            border-color: var(--ocean-blue);
+            border-color: #d4e9f3;
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px -10px rgba(14, 165, 233, 0.2);
+            box-shadow: var(--shadow-hover);
         }
 
         .site-card::after {
-            content: "\f08e";
+            content: "08e";
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 16px;
+            right: 16px;
             font-size: 0.8rem;
             color: #cbd5e1;
             transition: color 0.3s;
         }
+
         .site-card:hover::after { color: var(--ocean-blue); }
 
         .site-icon {
-            width: 45px; height: 45px;
-            background: #f1f5f9;
-            border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            width: 48px;
+            height: 48px;
+            background: #f2f7fa;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            margin-bottom: 16px;
             transition: all 0.3s;
         }
-        .site-card:hover .site-icon { background: var(--ocean-blue); color: white; }
+
+        .site-card:hover .site-icon {
+            background: linear-gradient(135deg, var(--ocean-blue), #79bfdc);
+            color: white;
+        }
 
         .site-info h5 {
-            font-size: 1.05rem;
+            font-size: 1.02rem;
             font-weight: 700;
             color: var(--primary-dark);
-            margin-bottom: 5px;
-        }
-        .site-info p {
-            font-size: 0.8rem;
-            color: #64748b;
-            margin-bottom: 0;
-            line-height: 1.4;
+            margin-bottom: 8px;
         }
 
-        /* 打印样式优化 */
+        .site-info p {
+            font-size: 0.88rem;
+            color: #66758a;
+            margin-bottom: 0;
+            line-height: 1.7;
+        }
+
+        footer {
+            margin-top: 42px;
+            padding-top: 26px;
+            border-top: 1px solid var(--line);
+        }
+
+        footer .footer-title {
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        footer p { color: #66758a; }
+
+        @media (max-width: 991px) {
+            .hero-header { padding: 44px 32px 36px; }
+            .content-body { padding: 34px 30px 36px; }
+            .hero-header h1 { font-size: 2.8rem; }
+            .header-meta { gap: 10px; }
+            .meta-item { padding: 9px 15px; }
+            .timeline-item,
+            .intro-card,
+            .skill-card,
+            .site-card { padding: 20px; }
+        }
+
+        @media (max-width: 767px) {
+            body { padding-top: 16px; }
+            .resume-wrapper { border-radius: 20px; }
+            .hero-header { padding: 34px 20px 28px; }
+            .content-body { padding: 26px 18px 28px; }
+            .hero-header h1 { font-size: 2.2rem; }
+            .hero-subtitle { font-size: 0.97rem; line-height: 1.8; }
+            .section-title { font-size: 1.45rem; }
+            .section-block + .section-block { margin-top: 34px; }
+            .header-meta { flex-direction: column; align-items: stretch; gap: 10px; }
+            .meta-item { width: 100%; justify-content: center; }
+            .timeline { padding-left: 20px; margin-left: 2px; }
+            .timeline-item { padding: 18px 16px 16px; border-radius: 18px; }
+            .timeline-item::before { left: -31px; top: 24px; width: 12px; height: 12px; }
+            .exp-head { flex-direction: column; gap: 8px; }
+            .intro-card { padding: 20px 18px; }
+            .intro-card p { font-size: 0.98rem; line-height: 1.85; }
+            .skill-card, .site-card { padding: 18px; border-radius: 16px; }
+            .skill-head { align-items: flex-start; }
+            footer { margin-top: 34px; padding-top: 20px; }
+            .btn-print {
+                top: auto;
+                bottom: 18px;
+                right: 18px;
+                padding: 12px 18px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .hero-badge { font-size: 0.8rem; }
+            .hero-header h1 { font-size: 2rem; }
+            .section-tag { font-size: 0.72rem; padding: 4px 12px; }
+            .icon-box-new, .site-icon { width: 44px; height: 44px; }
+            .site-info h5 { font-size: 0.98rem; }
+            .site-info p, .skill-card p, .timeline-item ul { font-size: 0.88rem; }
+            footer p.small { margin-top: 6px !important; }
+        }
+
         @media print {
             body { background: white !important; padding: 0 !important; }
             .resume-wrapper { box-shadow: none !important; border-radius: 0 !important; border: none !important; }
-            .hero-header { background: white !important; color: black !important; padding: 30px !important; border-bottom: 2px solid #000 !important; }
-            .hero-header h1 { -webkit-text-fill-color: black !important; font-size: 2.5rem !important; }
-            .meta-item { border: 1px solid #ddd !important; color: black !important; }
+            .hero-header {
+                background: white !important;
+                color: black !important;
+                padding: 28px !important;
+                border-bottom: 2px solid #000 !important;
+            }
+            .hero-header h1 { -webkit-text-fill-color: black !important; font-size: 2.4rem !important; }
+            .hero-subtitle, .meta-item, .hero-badge { color: black !important; border-color: #ddd !important; }
             .btn-print { display: none; }
-            .skill-card, .site-card { background: #fff !important; border: 1px solid #ddd !important; break-inside: avoid; }
-            .badge { border: 1px solid #000 !important; color: #000 !important; }
-        }
-
-        .btn-print {
-            position: fixed; right: 30px; top: 30px; z-index: 999;
-            background: var(--primary-dark); color: white; border: none;
-            padding: 15px 25px; border-radius: 50px; font-weight: 600;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2); cursor: pointer;
+            .timeline-item, .skill-card, .site-card, .intro-card {
+                background: #fff !important;
+                border: 1px solid #ddd !important;
+                break-inside: avoid;
+                box-shadow: none !important;
+            }
         }
     </style>
 </head>
@@ -251,134 +539,158 @@
 
     <div class="resume-wrapper">
         <div class="hero-header">
-            <h1>肖女士</h1>
-            <div class="header-meta">
-                <div class="meta-item"><i class="fas fa-globe me-2 text-info"></i>www.xiaonvshi.com</div>
-                <div class="meta-item"><i class="fas fa-envelope me-2 text-info"></i>lianxi@xiaonvshi.com</div>
-                <div class="meta-item"><i class="fas fa-briefcase me-2 text-info"></i>10+ Years Experience</div>
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-sparkles"></i> Global Digital Marketing & SEO</div>
+                <h1>肖女士</h1>
+                <p class="hero-subtitle">
+                    深耕互联网营销十余年，专注于 <strong>出海独立站搭建、搜索增长与广告投放优化</strong>。
+                    熟悉 WordPress 与 Shopify 建站生态，持续围绕 SEO、Google Ads 与 AI 工具提效，
+                    帮助业务在品牌展示、流量获取与线索转化之间形成更稳定的增长闭环。
+                </p>
+                <div class="header-meta">
+                    <div class="meta-item"><i class="fas fa-globe text-info"></i> www.xiaonvshi.com</div>
+                    <div class="meta-item"><i class="fas fa-envelope text-info"></i> lianxi@xiaonvshi.com</div>
+                    <div class="meta-item"><i class="fas fa-briefcase text-info"></i> 10+ Years Experience</div>
+                </div>
             </div>
         </div>
 
         <div class="content-body">
-            <section class="mb-5">
+            <section class="section-block">
                 <div class="section-tag">Profile</div>
-                <h2 class="section-title"><i class="fas fa-rocket"></i> 个人简介</h2>
-                <div class="row">
-                    <div class="col-md-11">
-                        <p class="lead" style="color:#475569; font-size: 1.1rem; line-height: 1.8;">
-                            深耕互联网营销十余年，专注于 <strong>出海独立站从 0 到 1 的体系化构建</strong>。精通 WordPress 与 Shopify 建站生态，深度掌握 Google Ads 投放策略与搜索排名算法。擅长通过数据建模与 <strong>AI 自动化工具</strong> 实现业务出海的指数级增长。
-                        </p>
-                    </div>
+                <h2 class="section-title"><i class="fas fa-user-circle"></i> 个人简介</h2>
+                <div class="intro-card">
+                    <p>
+                        长期专注于 <strong>海外独立站建设、SEO 自然流量增长、Google Ads 投放优化</strong> 与 <strong>AI 营销提效</strong>。
+                        擅长从网站结构、内容布局、搜索表现到转化路径进行系统梳理，
+                        让站点不只是完成搭建，更能在长期运营中持续产生曝光、询盘与增长价值。
+                    </p>
                 </div>
             </section>
 
-            <section class="mb-5">
+            <section class="section-block">
                 <div class="section-tag">Experience</div>
-                <h2 class="section-title"><i class="fas fa-chart-line"></i> 工作经验</h2>
+                <h2 class="section-title"><i class="fas fa-chart-line"></i> 工作经历</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="exp-date">2025 - PRESENT</div>
-                        <div class="exp-company">某电气公司 <span class="badge bg-info ms-2">Shopify & Ads</span></div>
-                        <ul class="mt-2 text-muted">
-                            <li>主导 Shopify 独立站全盘运营，针对海外 B2B/B2C 市场制定线索获取策略。</li>
-                            <li>管理 Google Ads 账户，通过关键词智能出价和素材 A/B 测试实现询盘量翻倍。</li>
+                        <div class="exp-head">
+                            <div>
+                                <div class="exp-company">某电气公司</div>
+                                <span class="badge-soft">Shopify & Ads</span>
+                            </div>
+                            <div class="exp-date">2025 - PRESENT</div>
+                        </div>
+                        <ul>
+                            <li>负责 Shopify 独立站整体运营，围绕海外 B2B / B2C 市场规划内容、页面与获客策略。</li>
+                            <li>管理 Google Ads 账户，通过关键词优化、出价调整与素材测试持续提升询盘效率。</li>
                         </ul>
                     </div>
                     <div class="timeline-item">
-                        <div class="exp-date">2022 - 2024</div>
-                        <div class="exp-company">某服务中心 <span class="badge bg-secondary ms-2">SEO 项目群运营</span></div>
-                        <ul class="mt-2 text-muted">
-                            <li>运营数十个跨行业站点，实现新站 7 天流量从 0 到 3,000 IP 的跨越式突破。</li>
-                            <li>在 Bing 及主流搜索引擎快速建立索引，攻克多项高难度核心关键词排名。</li>
+                        <div class="exp-head">
+                            <div>
+                                <div class="exp-company">某服务中心</div>
+                                <span class="badge-soft">SEO 项目群运营</span>
+                            </div>
+                            <div class="exp-date">2022 - 2024</div>
+                        </div>
+                        <ul>
+                            <li>运营多个跨行业站点，推动新站从冷启动到稳定流量增长，持续扩大搜索曝光。</li>
+                            <li>在 Bing 及主流搜索引擎中建立索引与排名优势，推进多个核心关键词实现突破。</li>
                         </ul>
                     </div>
                     <div class="timeline-item">
-                        <div class="exp-date">2017 - 2020</div>
-                        <div class="exp-company">某网络公司 <span class="badge bg-dark ms-2">SEM 负责人</span></div>
-                        <ul class="mt-2 text-muted">
-                            <li>负责百度竞价大户运营，ROI 稳定保持在 210% 以上，获客成本降低 40%。</li>
-                            <li>通过 SEO 将多个行业核心词推至首页前三，日自然流量峰值达 2 万 IP。</li>
+                        <div class="exp-head">
+                            <div>
+                                <div class="exp-company">某网络公司</div>
+                                <span class="badge-soft">SEM 负责人</span>
+                            </div>
+                            <div class="exp-date">2017 - 2020</div>
+                        </div>
+                        <ul>
+                            <li>负责竞价账户运营与预算管理，以 ROI 为导向持续优化投放结构与转化表现。</li>
+                            <li>结合 SEO 与 SEM 的协同策略，降低获客成本并提升自然流量与投放效率的整体表现。</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <section class="mb-5">
+            <section class="section-block">
                 <div class="section-tag">Skills Matrix</div>
-                <h2 class="section-title"><i class="fas fa-layer-group"></i> 专业技能矩阵</h2>
+                <h2 class="section-title"><i class="fas fa-layer-group"></i> 专业能力</h2>
                 <div class="row g-4">
                     <div class="col-md-6">
-                        <div class="skill-card h-100" style="background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%); border-left: 4px solid var(--ocean-blue);">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box-new me-3"><i class="fas fa-chart-line text-info"></i></div>
-                                <h4 class="mb-0">核心全链 SEO 架构</h4>
+                        <div class="skill-card blue">
+                            <div class="skill-head">
+                                <div class="icon-box-new"><i class="fas fa-chart-line text-info"></i></div>
+                                <h4>SEO 增长体系</h4>
                             </div>
                             <div class="skill-tags">
-                                <span class="badge bg-white text-dark border mb-1">关键词全量建模</span>
-                                <span class="badge bg-white text-dark border mb-1">Technical SEO</span>
-                                <span class="badge bg-white text-dark border mb-1">外链权重增补</span>
-                                <span class="badge bg-white text-dark border mb-1">GSC 深度审计</span>
+                                <span class="badge">关键词建模</span>
+                                <span class="badge">Technical SEO</span>
+                                <span class="badge">GSC 审计</span>
+                                <span class="badge">外链策略</span>
                             </div>
-                            <p class="small text-muted mt-2 mb-0">深谙 Google 算法逻辑，擅长通过站群矩阵实现存量与增量流量的双重爆发。</p>
+                            <p>从关键词布局、内容结构到技术优化，搭建更适合长期沉淀的自然流量体系。</p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="skill-card h-100" style="background: linear-gradient(135deg, #f8fafc 0%, #f5f3ff 100%); border-left: 4px solid var(--tech-purple);">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box-new me-3"><i class="fab fa-google text-primary"></i></div>
-                                <h4 class="mb-0">高转化付费策略 (SEM)</h4>
+                        <div class="skill-card purple">
+                            <div class="skill-head">
+                                <div class="icon-box-new"><i class="fab fa-google text-primary"></i></div>
+                                <h4>付费投放优化</h4>
                             </div>
                             <div class="skill-tags">
-                                <span class="badge bg-white text-dark border mb-1">Google Ads</span>
-                                <span class="badge bg-white text-dark border mb-1">ROI 精准测算</span>
-                                <span class="badge bg-white text-dark border mb-1">百度竞价</span>
-                                <span class="badge bg-white text-dark border mb-1">A/B Testing</span>
+                                <span class="badge">Google Ads</span>
+                                <span class="badge">ROI 测算</span>
+                                <span class="badge">百度竞价</span>
+                                <span class="badge">A/B Testing</span>
                             </div>
-                            <p class="small text-muted mt-2 mb-0">管理千万级账户，以数据驱动决策，将获客成本（CPA）控制在行业领先水平。</p>
+                            <p>以数据驱动账户优化，从关键词、素材到出价策略，持续提升投放效率与转化表现。</p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="skill-card h-100" style="background: linear-gradient(135deg, #f8fafc 0%, #fff7ed 100%); border-left: 4px solid var(--accent-gold);">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box-new me-3"><i class="fas fa-code text-warning"></i></div>
-                                <h4 class="mb-0">数字化出海建站</h4>
+                        <div class="skill-card gold">
+                            <div class="skill-head">
+                                <div class="icon-box-new"><i class="fas fa-code text-warning"></i></div>
+                                <h4>独立站搭建与优化</h4>
                             </div>
                             <div class="skill-tags">
-                                <span class="badge bg-white text-dark border mb-1">WordPress / Shopify</span>
-                                <span class="badge bg-white text-dark border mb-1">WooCommerce</span>
-                                <span class="badge bg-white text-dark border mb-1">Elementor 二开</span>
-                                <span class="badge bg-white text-dark border mb-1">响应式调优</span>
+                                <span class="badge">WordPress / Shopify</span>
+                                <span class="badge">WooCommerce</span>
+                                <span class="badge">Elementor 二开</span>
+                                <span class="badge">响应式调优</span>
                             </div>
-                            <p class="small text-muted mt-2 mb-0">提供从服务器、架构到 UI/UX 的全流程交付，确保站点不仅“好看”更能“转化”。</p>
+                            <p>兼顾页面展示、结构清晰度与用户体验，让站点更适合品牌表达与后续转化运营。</p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="skill-card h-100" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border-left: 4px solid #10b981;">
-                            <div class="d-flex align-items-center mb-3">
-                                <div class="icon-box-new me-3" style="background: rgba(16, 185, 129, 0.1);"><i class="fas fa-microchip text-success"></i></div>
-                                <h4 class="mb-0 text-white">AI 智能营销自动化</h4>
+                        <div class="skill-card dark">
+                            <div class="skill-head">
+                                <div class="icon-box-new"><i class="fas fa-microchip text-success"></i></div>
+                                <h4>AI 营销提效</h4>
                             </div>
                             <div class="skill-tags">
-                                <span class="badge bg-dark text-success border-success border mb-1">Prompt Engineering</span>
-                                <span class="badge bg-dark text-success border-success border mb-1">AI 内容矩阵</span>
-                                <span class="badge bg-dark text-success border-success border mb-1">DeepSeek 集成</span>
+                                <span class="badge">Prompt Engineering</span>
+                                <span class="badge">AI 内容辅助</span>
+                                <span class="badge">流程提效</span>
+                                <span class="badge">信息整理</span>
                             </div>
-                            <p class="small text-light opacity-75 mt-2 mb-0">利用 AI 提升 5 倍内容产出速度，通过模型微调精准捕捉全球用户搜索意图。</p>
+                            <p>借助 AI 工具提升内容生产、素材整理与执行效率，让日常运营更轻量、更高效。</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="mb-5">
+            <section class="section-block">
                 <div class="section-tag">Digital Ecosystem</div>
-                <h2 class="section-title"><i class="fas fa-network-wired"></i> 个人运营站群</h2>
+                <h2 class="section-title"><i class="fas fa-network-wired"></i> 个人运营站点</h2>
                 <div class="row g-4">
                     <div class="col-md-4">
                         <a href="https://huilv.xiaonvshi.com/" class="site-card" target="_blank">
                             <div class="site-icon">💱</div>
                             <div class="site-info">
                                 <h5>实时汇率查询</h5>
-                                <p>提供全球 160+ 货币实时兑换参考，支持外贸结算测算。</p>
+                                <p>提供多币种兑换参考，便于外贸报价、结算换算与日常数据查询。</p>
                             </div>
                         </a>
                     </div>
@@ -387,7 +699,7 @@
                             <div class="site-icon">🌐</div>
                             <div class="site-info">
                                 <h5>Whois 域名查询</h5>
-                                <p>全网域名注册信息深度检索，外贸竞品分析必备工具。</p>
+                                <p>支持域名注册信息检索，适用于竞品分析、站点研究与基础信息判断。</p>
                             </div>
                         </a>
                     </div>
@@ -396,7 +708,7 @@
                             <div class="site-icon">🔳</div>
                             <div class="site-info">
                                 <h5>二维码实验室</h5>
-                                <p>多功能动态二维码生成，优化移动端营销转化入口。</p>
+                                <p>适用于多场景二维码生成与分发，方便连接网页、社媒与移动端入口。</p>
                             </div>
                         </a>
                     </div>
@@ -405,7 +717,7 @@
                             <div class="site-icon">☁️</div>
                             <div class="site-info">
                                 <h5>全球精准天气</h5>
-                                <p>基于地理位置的实时气象数据，辅助全球物流与营销排期。</p>
+                                <p>提供多地区实时天气信息，可辅助出行、物流安排与时间判断。</p>
                             </div>
                         </a>
                     </div>
@@ -414,7 +726,7 @@
                             <div class="site-icon">🗓</div>
                             <div class="site-info">
                                 <h5>高效万年历</h5>
-                                <p>多历法集成，节假日营销节点自动提醒与管理。</p>
+                                <p>整合日期与节假日信息，便于内容规划、营销节点整理与日常查询。</p>
                             </div>
                         </a>
                     </div>
@@ -423,19 +735,19 @@
                             <div class="site-icon">🕛</div>
                             <div class="site-info">
                                 <h5>历史上的今天</h5>
-                                <p>每日内容创意源泉，为社交媒体运营提供深度素材储备。</p>
+                                <p>沉淀内容灵感与热点素材，为社交平台更新和选题延展提供支持。</p>
                             </div>
                         </a>
                     </div>
                 </div>
             </section>
 
-            <footer class="text-center mt-5 pt-4 border-top">
-                <p class="text-muted mb-1">专注于全球数字营销和搜索引擎优化推广实战</p>
-                <div class="fw-bold" style="color: var(--primary-dark);">
+            <footer class="text-center">
+                <p class="mb-1">专注于全球数字营销与搜索增长实战</p>
+                <div class="footer-title">
                     Email: <a href="mailto:lianxi@xiaonvshi.com" class="text-decoration-none">lianxi@xiaonvshi.com</a>
                 </div>
-                <p class="mt-4 small text-secondary">©2026 肖女士 版权所有</p>
+                <p class="mt-1 mb-0 small text-secondary">©2026 肖女士 版权所有</p>
             </footer>
         </div>
     </div>
