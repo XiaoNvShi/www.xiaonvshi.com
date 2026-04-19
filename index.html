@@ -4,108 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>肖女士</title>
-    <meta name="keywords" content="肖女士,独立站,外贸独立站,海外数字营销,SEO,Google Ads" />
-    <meta name="description" content="十余年营销推广实战经验，专注于出海独立站运营与全球化搜索增长。" />
+    <meta name="keywords" content="肖女士,独立站,外贸独立站,海外数字营销,SEO,Google Ads">
+    <meta name="description" content="十余年营销推广实战经验，专注于出海独立站运营与全球化搜索增长。">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --primary-dark: #162033;
-            --primary-text: #243447;
-            --secondary-text: #66758a;
-            --ocean-blue: #4aa3d8;
-            --soft-blue: #eaf5fb;
-            --soft-cyan: #f3f9fc;
-            --mist-purple: #8d88c7;
-            --soft-purple: #f5f3fb;
-            --light-bg: #f5f8fb;
-            --card-bg: rgba(255, 255, 255, 0.96);
-            --line: #e6edf4;
-            --line-strong: #d8e5f0;
-            --shadow-soft: 0 18px 45px rgba(22, 32, 51, 0.07);
-            --shadow-hover: 0 20px 48px rgba(74, 163, 216, 0.12);
+            --bg: #f4f7fb;
+            --card: rgba(255,255,255,0.96);
+            --title: #162334;
+            --text: #2e4156;
+            --muted: #6b7b8c;
+            --line: #e2eaf2;
+            --line-strong: #d4e1eb;
+            --blue: #5ba8d6;
+            --blue-deep: #3f83b0;
+            --purple: #8b84c4;
+            --blue-soft: #eef8fc;
+            --purple-soft: #f6f2fb;
+            --gold-soft: #fcfaf4;
+            --hero-a: #18263a;
+            --hero-b: #24364c;
+            --hero-c: #1d2a3d;
+            --shadow: 0 22px 60px rgba(20, 34, 54, 0.08);
+            --shadow-soft: 0 12px 28px rgba(20, 34, 54, 0.05);
+            --radius-xl: 28px;
+            --radius-lg: 20px;
+            --radius-md: 16px;
         }
 
         * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             margin: 0;
-            color: var(--primary-text);
             font-family: 'Inter', 'PingFang SC', system-ui, sans-serif;
+            color: var(--text);
             background:
-                radial-gradient(at 0% 0%, rgba(74,163,216,0.08) 0, transparent 42%),
-                radial-gradient(at 100% 0%, rgba(141,136,199,0.08) 0, transparent 34%),
-                linear-gradient(180deg, #f7fafc 0%, #f3f7fb 100%);
-            padding: 34px 0 60px;
+                radial-gradient(at 0% 0%, rgba(91,168,214,0.08) 0, transparent 42%),
+                radial-gradient(at 100% 0%, rgba(139,132,196,0.08) 0, transparent 34%),
+                linear-gradient(180deg, #f8fbfd 0%, var(--bg) 100%);
+            padding: 32px 0 54px;
         }
 
-        a { text-decoration: none; }
+        a { color: inherit; text-decoration: none; }
 
         .btn-print {
             position: fixed;
             right: 28px;
             top: 28px;
             z-index: 999;
-            background: linear-gradient(135deg, var(--primary-dark), #2a3952);
-            color: white;
             border: none;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--hero-a), var(--hero-b));
+            color: #fff;
             padding: 14px 22px;
-            border-radius: 50px;
             font-weight: 600;
-            box-shadow: 0 12px 28px rgba(22, 32, 51, 0.16);
-            cursor: pointer;
+            box-shadow: 0 14px 34px rgba(23,35,52,0.18);
             transition: transform .25s ease, box-shadow .25s ease;
         }
 
         .btn-print:hover {
             transform: translateY(-2px);
-            box-shadow: 0 16px 32px rgba(22, 32, 51, 0.2);
+            box-shadow: 0 18px 38px rgba(23,35,52,0.22);
         }
 
         .resume-wrapper {
-            max-width: 980px;
+            max-width: 1040px;
             margin: 0 auto;
-            background: var(--card-bg);
-            border-radius: 28px;
+            background: var(--card);
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(255,255,255,0.75);
+            box-shadow: var(--shadow);
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            box-shadow: var(--shadow-soft);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(10px);
         }
 
         .hero-header {
-            background: linear-gradient(135deg, #1a2436 0%, #26364d 55%, #1c283d 100%);
-            padding: 56px 44px 42px;
-            color: white;
             position: relative;
+            padding: 42px 44px 34px;
+            background: linear-gradient(135deg, var(--hero-a) 0%, var(--hero-b) 56%, var(--hero-c) 100%);
+            color: #fff;
             overflow: hidden;
         }
 
-        .hero-header::before {
-            content: "";
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            right: -90px;
-            top: -110px;
-            background: radial-gradient(circle, rgba(106,197,233,0.18), transparent 66%);
-        }
-
+        .hero-header::before,
         .hero-header::after {
             content: "";
             position: absolute;
+            border-radius: 999px;
+            pointer-events: none;
+        }
+
+        .hero-header::before {
+            width: 300px;
+            height: 300px;
+            right: -110px;
+            top: -120px;
+            background: radial-gradient(circle, rgba(91,168,214,0.18), transparent 66%);
+        }
+
+        .hero-header::after {
             width: 250px;
             height: 250px;
             left: -90px;
             bottom: -120px;
-            background: radial-gradient(circle, rgba(141,136,199,0.18), transparent 68%);
+            background: radial-gradient(circle, rgba(139,132,196,0.18), transparent 68%);
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
+            max-width: 760px;
         }
 
         .hero-badge {
@@ -113,127 +125,201 @@
             align-items: center;
             gap: 8px;
             padding: 8px 14px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.14);
             border-radius: 999px;
-            font-size: 0.88rem;
-            margin-bottom: 18px;
-            color: rgba(255,255,255,.92);
+            background: rgba(255,255,255,0.11);
+            border: 1px solid rgba(255,255,255,0.14);
+            color: rgba(255,255,255,0.94);
+            font-size: .88rem;
+            margin-bottom: 16px;
+        }
+
+        .hero-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
         }
 
         .hero-header h1 {
+            margin: 0;
             font-size: 3.4rem;
+            line-height: .98;
             font-weight: 800;
             letter-spacing: -1.4px;
-            margin-bottom: 12px;
-            background: linear-gradient(to right, #ffffff, #d7f1ff 54%, #e4e0ff 100%);
+            background: linear-gradient(to right, #ffffff, #d9f2ff 56%, #e8e1ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        .hero-exp {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 14px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.16);
+            color: rgba(255,255,255,0.95);
+            font-size: .88rem;
+            font-weight: 600;
+            white-space: nowrap;
+            margin-top: 4px;
+        }
+
         .hero-subtitle {
-            max-width: 760px;
-            color: rgba(255, 255, 255, 0.82);
-            font-size: 1.03rem;
+            max-width: 700px;
+            margin: 0 0 20px;
+            color: rgba(255,255,255,0.82);
+            font-size: 1.02rem;
             line-height: 1.9;
-            margin-bottom: 28px;
         }
 
         .header-meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 12px;
         }
 
         .meta-item {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 18px;
+            padding: 10px 16px;
             border-radius: 999px;
-            font-size: 0.92rem;
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            transition: all 0.3s ease;
-            color: rgba(255,255,255,.94);
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.14);
+            color: rgba(255,255,255,0.95);
+            font-size: .92rem;
         }
 
-        .meta-item:hover {
-            background: rgba(255, 255, 255, 0.16);
-            transform: translateY(-2px);
+        .meta-label {
+            display: none;
         }
 
         .content-body {
-            padding: 42px 46px 46px;
+            padding: 38px 44px 40px;
         }
 
-        .section-block + .section-block {
-            margin-top: 46px;
+        .section-block + .section-block { margin-top: 34px; }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: flex-end;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
         }
 
         .section-tag {
             display: inline-block;
-            background: linear-gradient(90deg, var(--ocean-blue), var(--mist-purple));
-            color: white;
-            padding: 5px 14px;
+            padding: 5px 13px;
             border-radius: 999px;
-            font-size: 0.78rem;
+            background: linear-gradient(90deg, var(--blue), var(--purple));
+            color: #fff;
+            font-size: .76rem;
             font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: .06em;
             text-transform: uppercase;
+            letter-spacing: .06em;
+            margin-bottom: 10px;
         }
 
         .section-title {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary-dark);
-            margin-bottom: 22px;
             display: flex;
             align-items: center;
-            gap: 12px;
-            letter-spacing: -0.02em;
+            gap: 10px;
+            margin: 0;
+            color: var(--title);
+            font-size: 1.78rem;
+            font-weight: 800;
+            letter-spacing: -.02em;
         }
 
-        .section-title i {
-            color: var(--ocean-blue);
+        .section-title i { color: var(--blue); }
+
+        .section-note {
+            color: var(--muted);
+            font-size: .93rem;
+            line-height: 1.72;
+            max-width: 560px;
+        }
+
+        .intro-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.18fr) minmax(250px, .82fr);
+            gap: 18px;
+        }
+
+        .intro-card,
+        .mini-card,
+        .timeline-item,
+        .skill-card,
+        .site-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
         }
 
         .intro-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fbfd 100%);
-            border: 1px solid var(--line);
-            border-radius: 22px;
-            padding: 28px 30px;
-            box-shadow: 0 10px 30px rgba(22, 32, 51, 0.04);
+            padding: 24px 28px;
+            background: linear-gradient(135deg, #fff 0%, #f9fbfd 100%);
         }
 
         .intro-card p {
             margin: 0;
-            font-size: 1.04rem;
-            line-height: 1.95;
-            color: #4e5f74;
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #4f6176;
         }
 
-        .intro-card strong {
-            color: var(--primary-dark);
+        .intro-card strong { color: var(--title); }
+
+        .mini-card-wrap {
+            display: grid;
+            gap: 12px;
+        }
+
+        .mini-card {
+            padding: 18px 18px 16px;
+            background: linear-gradient(135deg, var(--blue-soft) 0%, #fff 100%);
+        }
+
+        .mini-card.purple {
+            background: linear-gradient(135deg, var(--purple-soft) 0%, #fff 100%);
+        }
+
+        .mini-card-label {
+            font-size: .76rem;
+            color: var(--blue-deep);
+            text-transform: uppercase;
+            letter-spacing: .08em;
             font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .mini-card.purple .mini-card-label { color: #7a73b5; }
+
+        .mini-card p {
+            margin: 0;
+            color: #55667a;
+            line-height: 1.75;
+            font-size: .91rem;
         }
 
         .timeline {
             position: relative;
-            padding-left: 28px;
-            margin-left: 8px;
+            padding-left: 24px;
             border-left: 2px solid var(--line-strong);
+            margin-left: 8px;
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 22px;
-            background: white;
-            border: 1px solid var(--line);
-            border-radius: 22px;
-            padding: 24px 24px 22px;
-            box-shadow: 0 10px 28px rgba(22, 32, 51, 0.04);
+            margin-bottom: 14px;
+            padding: 20px 22px 18px;
         }
 
         .timeline-item:last-child { margin-bottom: 0; }
@@ -241,14 +327,14 @@
         .timeline-item::before {
             content: "";
             position: absolute;
-            left: -39px;
-            top: 28px;
+            left: -36px;
+            top: 24px;
             width: 14px;
             height: 14px;
             border-radius: 50%;
-            background: var(--ocean-blue);
-            border: 3px solid white;
-            box-shadow: 0 0 0 5px rgba(74, 163, 216, 0.15);
+            background: var(--blue);
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 4px rgba(91,168,214,0.14);
         }
 
         .exp-head {
@@ -260,18 +346,18 @@
             margin-bottom: 10px;
         }
 
-        .exp-date {
+        .exp-company {
+            color: var(--title);
+            font-size: 1.14rem;
             font-weight: 700;
-            color: var(--ocean-blue);
-            font-size: 0.9rem;
-            letter-spacing: .03em;
+            line-height: 1.42;
         }
 
-        .exp-company {
-            font-size: 1.18rem;
+        .exp-date {
+            color: var(--blue-deep);
+            font-size: .9rem;
             font-weight: 700;
-            color: var(--primary-dark);
-            line-height: 1.5;
+            letter-spacing: .02em;
         }
 
         .badge-soft {
@@ -279,256 +365,577 @@
             margin-top: 8px;
             padding: 6px 12px;
             border-radius: 999px;
-            font-size: 0.78rem;
-            font-weight: 600;
             background: #eef7fc;
-            color: #3f89bb;
-            border: 1px solid #d9ebf6;
+            color: var(--blue-deep);
+            border: 1px solid #d8eaf4;
+            font-size: .78rem;
+            font-weight: 600;
         }
 
         .timeline-item ul {
-            margin: 14px 0 0;
+            margin: 12px 0 0;
             padding-left: 18px;
-            color: #66758a;
-            line-height: 1.85;
+            color: #66778b;
+            line-height: 1.78;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
         }
 
         .skill-card {
-            padding: 24px;
-            border-radius: 22px;
-            border: 1px solid var(--line);
-            background: white;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 10px 28px rgba(22, 32, 51, 0.04);
             height: 100%;
+            padding: 20px;
+            transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
         }
 
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-            border-color: #d4e8f3;
+        .skill-card:hover,
+        .site-card:hover,
+        .timeline-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 34px rgba(20,34,54,0.08);
+            border-color: #d2e5ef;
         }
 
-        .skill-card.blue { background: linear-gradient(135deg, #ffffff 0%, #f5fbfe 100%); }
-        .skill-card.purple { background: linear-gradient(135deg, #ffffff 0%, #f8f6fc 100%); }
-        .skill-card.gold { background: linear-gradient(135deg, #ffffff 0%, #fcfaf5 100%); }
-        .skill-card.dark {
-            background: linear-gradient(135deg, #1b273b 0%, #162033 100%);
-            color: white;
-            border-color: rgba(255, 255, 255, 0.08);
+        .skill-card.blue { background: linear-gradient(135deg, #fff 0%, #f4fbfe 100%); }
+        .skill-card.purple { background: linear-gradient(135deg, #fff 0%, #f7f5fc 100%); }
+        .skill-card.gold { background: linear-gradient(135deg, #fff 0%, var(--gold-soft) 100%); }
+        .skill-card.deep {
+            background: linear-gradient(135deg, #1b2a3c 0%, #223149 100%);
+            border-color: rgba(255,255,255,0.08);
         }
 
         .skill-head {
             display: flex;
             align-items: center;
             gap: 14px;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .icon-box-new {
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 6px 14px rgba(20,34,54,0.08);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
-            background: white;
-            box-shadow: 0 6px 14px rgba(22, 32, 51, 0.08);
+            font-size: 1.22rem;
             flex-shrink: 0;
         }
 
-        .skill-card.dark .icon-box-new {
-            background: rgba(255, 255, 255, 0.08);
+        .skill-card.deep .icon-box-new {
+            background: rgba(255,255,255,0.1);
             box-shadow: none;
         }
 
         .skill-card h4 {
             margin: 0;
-            font-size: 1.08rem;
+            color: var(--title);
+            font-size: 1.04rem;
             font-weight: 700;
-            color: var(--primary-dark);
         }
 
-        .skill-card.dark h4,
-        .skill-card.dark p { color: white; }
+        .skill-card.deep h4,
+        .skill-card.deep p { color: #fff; }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 14px;
+            margin-bottom: 10px;
         }
 
         .skill-tags .badge {
-            font-weight: 500;
-            font-size: 0.76rem;
             padding: 7px 10px !important;
             border-radius: 9px !important;
-            border: 1px solid #dde7ef;
-            background: rgba(255, 255, 255, 0.92);
-            color: #415166;
+            background: rgba(255,255,255,0.92);
+            border: 1px solid #dbe7f0;
+            color: #44556a;
+            font-size: .75rem;
+            font-weight: 500;
         }
 
-        .skill-card.dark .skill-tags .badge {
-            background: rgba(255, 255, 255, 0.08);
-            color: rgba(255,255,255,.9);
-            border-color: rgba(255,255,255,.12);
+        .skill-card.deep .skill-tags .badge {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.9);
         }
 
         .skill-card p {
-            color: #66758a;
-            line-height: 1.75;
-            margin-bottom: 0;
-            font-size: 0.94rem;
+            margin: 0;
+            color: #66778b;
+            line-height: 1.72;
+            font-size: .91rem;
+        }
+
+        .sites-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
         }
 
         .site-card {
-            background: white;
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            padding: 22px;
-            display: flex;
-            flex-direction: column;
+            display: block;
+            padding: 20px;
             height: 100%;
-            transition: all 0.3s ease;
+            transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
             position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 26px rgba(22, 32, 51, 0.04);
         }
 
-        .site-card:hover {
-            border-color: #d4e9f3;
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
+        .site-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            background: #f2f7fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.24rem;
+            margin-bottom: 14px;
+        }
+
+        .site-card h5 {
+            margin: 0 0 8px;
+            color: var(--title);
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .site-card p {
+            margin: 0;
+            color: #66778b;
+            font-size: .88rem;
+            line-height: 1.68;
         }
 
         .site-card::after {
-            content: "08e";
+            content: "\f08e";
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             position: absolute;
             top: 16px;
             right: 16px;
-            font-size: 0.8rem;
-            color: #cbd5e1;
-            transition: color 0.3s;
-        }
-
-        .site-card:hover::after { color: var(--ocean-blue); }
-
-        .site-icon {
-            width: 48px;
-            height: 48px;
-            background: #f2f7fa;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.35rem;
-            margin-bottom: 16px;
-            transition: all 0.3s;
-        }
-
-        .site-card:hover .site-icon {
-            background: linear-gradient(135deg, var(--ocean-blue), #79bfdc);
-            color: white;
-        }
-
-        .site-info h5 {
-            font-size: 1.02rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 8px;
-        }
-
-        .site-info p {
-            font-size: 0.88rem;
-            color: #66758a;
-            margin-bottom: 0;
-            line-height: 1.7;
+            color: #cad5e1;
+            font-size: .8rem;
         }
 
         footer {
-            margin-top: 42px;
-            padding-top: 26px;
+            margin-top: 28px;
+            padding-top: 18px;
             border-top: 1px solid var(--line);
         }
 
-        footer .footer-title {
-            font-weight: 700;
-            color: var(--primary-dark);
-        }
-
-        footer p { color: #66758a; }
+        footer p { margin-bottom: 0; color: #6f7d8d; }
+        .footer-title { font-weight: 700; color: var(--title); }
 
         @media (max-width: 991px) {
-            .hero-header { padding: 44px 32px 36px; }
-            .content-body { padding: 34px 30px 36px; }
-            .hero-header h1 { font-size: 2.8rem; }
-            .header-meta { gap: 10px; }
-            .meta-item { padding: 9px 15px; }
-            .timeline-item,
-            .intro-card,
-            .skill-card,
-            .site-card { padding: 20px; }
+            body { padding: 24px 0 42px; }
+            .resume-wrapper { border-radius: 24px; }
+            .hero-header { padding: 38px 30px 34px; }
+            .content-body { padding: 34px 30px 34px; }
+            .hero-content { max-width: 100%; }
+            .hero-header h1 { font-size: 3rem; }
+            .hero-subtitle { max-width: 100%; }
+            .intro-layout { grid-template-columns: 1fr; }
+            .section-block + .section-block { margin-top: 30px; }
+            .section-head { margin-bottom: 16px; }
+            .sites-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
 
         @media (max-width: 767px) {
-            body { padding-top: 16px; }
-            .resume-wrapper { border-radius: 20px; }
-            .hero-header { padding: 34px 20px 28px; }
-            .content-body { padding: 26px 18px 28px; }
-            .hero-header h1 { font-size: 2.2rem; }
-            .hero-subtitle { font-size: 0.97rem; line-height: 1.8; }
-            .section-title { font-size: 1.45rem; }
-            .section-block + .section-block { margin-top: 34px; }
-            .header-meta { flex-direction: column; align-items: stretch; gap: 10px; }
-            .meta-item { width: 100%; justify-content: center; }
-            .timeline { padding-left: 20px; margin-left: 2px; }
-            .timeline-item { padding: 18px 16px 16px; border-radius: 18px; }
-            .timeline-item::before { left: -31px; top: 24px; width: 12px; height: 12px; }
-            .exp-head { flex-direction: column; gap: 8px; }
+            body { padding: 14px 0 32px; }
+            .resume-wrapper { border-radius: 18px; }
+            .hero-header { padding: 30px 18px 24px; }
+            .content-body { padding: 24px 16px 24px; }
+            .hero-title-row { flex-direction: column; gap: 8px; }
+            .hero-header h1 { font-size: 2.28rem; }
+            .hero-exp { font-size: .82rem; padding: 7px 12px; }
+            .hero-subtitle { font-size: .95rem; line-height: 1.8; margin-bottom: 18px; }
+            .header-meta { flex-direction: column; gap: 9px; }
+            .meta-item { width: 100%; justify-content: center; padding: 10px 14px; }
+            .section-title { font-size: 1.36rem; }
+            .section-head { margin-bottom: 14px; }
+            .section-note { font-size: .9rem; }
+            .section-block + .section-block { margin-top: 24px; }
+            .intro-layout { gap: 14px; }
             .intro-card { padding: 20px 18px; }
-            .intro-card p { font-size: 0.98rem; line-height: 1.85; }
-            .skill-card, .site-card { padding: 18px; border-radius: 16px; }
-            .skill-head { align-items: flex-start; }
-            footer { margin-top: 34px; padding-top: 20px; }
+            .intro-card p { font-size: .96rem; line-height: 1.84; }
+            .mini-card-wrap { gap: 10px; }
+            .mini-card { padding: 16px; }
+            .timeline { padding-left: 18px; margin-left: 2px; }
+            .timeline-item { padding: 16px 14px 14px; border-radius: 16px; }
+            .timeline-item::before { left: -28px; top: 22px; width: 11px; height: 11px; box-shadow: 0 0 0 4px rgba(91,168,214,0.12); }
+            .exp-head { flex-direction: column; gap: 8px; }
+            .exp-company { font-size: 1rem; }
+            .exp-date { font-size: .84rem; }
+            .skills-grid,
+            .sites-grid { grid-template-columns: 1fr; gap: 14px; }
+            .skill-card,
+            .site-card { padding: 16px; border-radius: 16px; }
+            .skill-head { align-items: flex-start; gap: 12px; }
+            .skill-tags { gap: 6px; }
+            .skill-tags .badge { font-size: .72rem; padding: 6px 8px !important; }
+            footer { margin-top: 24px; padding-top: 16px; }
             .btn-print {
                 top: auto;
-                bottom: 18px;
-                right: 18px;
-                padding: 12px 18px;
+                right: 14px;
+                bottom: 14px;
+                padding: 11px 16px;
+                font-size: .88rem;
+                border-radius: 14px;
             }
         }
 
         @media (max-width: 575px) {
-            .hero-badge { font-size: 0.8rem; }
+            .hero-badge { font-size: .78rem; }
             .hero-header h1 { font-size: 2rem; }
-            .section-tag { font-size: 0.72rem; padding: 4px 12px; }
-            .icon-box-new, .site-icon { width: 44px; height: 44px; }
-            .site-info h5 { font-size: 0.98rem; }
-            .site-info p, .skill-card p, .timeline-item ul { font-size: 0.88rem; }
+            .section-tag { font-size: .7rem; padding: 4px 11px; }
+            .icon-box-new, .site-icon { width: 42px; height: 42px; font-size: 1.12rem; }
+            .timeline-item ul, .skill-card p, .site-card p { font-size: .87rem; line-height: 1.72; }
             footer p.small { margin-top: 6px !important; }
         }
 
         @media print {
-            body { background: white !important; padding: 0 !important; }
-            .resume-wrapper { box-shadow: none !important; border-radius: 0 !important; border: none !important; }
-            .hero-header {
-                background: white !important;
-                color: black !important;
-                padding: 28px !important;
-                border-bottom: 2px solid #000 !important;
+            @page {
+                size: A4;
+                margin: 11mm 12mm;
             }
-            .hero-header h1 { -webkit-text-fill-color: black !important; font-size: 2.4rem !important; }
-            .hero-subtitle, .meta-item, .hero-badge { color: black !important; border-color: #ddd !important; }
-            .btn-print { display: none; }
-            .timeline-item, .skill-card, .site-card, .intro-card {
+
+            html, body {
                 background: #fff !important;
-                border: 1px solid #ddd !important;
-                break-inside: avoid;
+                color: #233447 !important;
+                font-size: 10.2pt !important;
+                line-height: 1.5 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            body {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .btn-print,
+            .hero-badge,
+            .section-sites,
+            .site-icon,
+            .site-card,
+            .section-title i,
+            footer {
+                display: none !important;
+            }
+
+            .resume-wrapper {
+                max-width: 100% !important;
+                width: 100% !important;
+                border: none !important;
+                border-radius: 0 !important;
                 box-shadow: none !important;
+                background: #fff !important;
+                overflow: visible !important;
+            }
+
+            .hero-header {
+                background: #fff !important;
+                border: none !important;
+                border-radius: 0 !important;
+                padding: 0 0 8px !important;
+                color: #233447 !important;
+            }
+
+            .hero-header::before,
+            .hero-header::after {
+                display: none !important;
+            }
+
+            .hero-content {
+                display: block !important;
+                max-width: 100% !important;
+            }
+
+            .hero-title-row {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: flex-start !important;
+                gap: 10px !important;
+                flex-wrap: nowrap !important;
+                margin-bottom: 6px !important;
+            }
+
+            .hero-header h1 {
+                background: none !important;
+                -webkit-text-fill-color: #172334 !important;
+                color: #172334 !important;
+                font-size: 23pt !important;
+                margin: 0 !important;
+                line-height: 1.02 !important;
+                letter-spacing: -.02em !important;
+            }
+
+            .hero-exp {
+                margin: 2px 0 0 !important;
+                padding: 4px 10px !important;
+                border-radius: 999px !important;
+                background: #eef7fc !important;
+                border: 1px solid #d9e8f2 !important;
+                color: #4b708a !important;
+                font-size: 8.9pt !important;
+                font-weight: 700 !important;
+                white-space: nowrap !important;
+            }
+
+            .hero-exp i { color: var(--blue) !important; }
+
+            .hero-subtitle {
+                max-width: 100% !important;
+                margin: 0 0 8px !important;
+                color: #495c70 !important;
+                font-size: 9.9pt !important;
+                line-height: 1.58 !important;
+            }
+
+            .header-meta {
+                display: block !important;
+                margin-top: 0 !important;
+            }
+
+            .meta-item {
+                display: block !important;
+                padding: 0 !important;
+                margin: 0 0 3px !important;
+                background: transparent !important;
+                border: none !important;
+                border-radius: 0 !important;
+                color: #456177 !important;
+                font-size: 8.9pt !important;
+                box-shadow: none !important;
+                white-space: normal !important;
+            }
+
+            .meta-item:last-child {
+                margin-bottom: 0 !important;
+            }
+
+            .meta-item i {
+                display: none !important;
+            }
+
+            .meta-label {
+                display: inline !important;
+                font-weight: 600 !important;
+                color: #233447 !important;
+            }
+
+            .content-body {
+                padding: 12px 0 0 !important;
+            }
+
+            .section-block {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .section-block + .section-block {
+                margin-top: 10px !important;
+            }
+
+            .section-head {
+                margin-bottom: 6px !important;
+            }
+
+            .section-tag,
+            .section-note {
+                display: none !important;
+            }
+
+            .section-title {
+                display: block !important;
+                font-size: 12.2pt !important;
+                font-weight: 800 !important;
+                color: #172334 !important;
+                margin: 0 !important;
+                padding: 0 0 4px 0 !important;
+                border-bottom: 1px solid #dbe6ee !important;
+                line-height: 1.2 !important;
+            }
+
+            .intro-layout {
+                display: block !important;
+            }
+
+            .intro-card,
+            .mini-card,
+            .timeline-item,
+            .skill-card,
+            .skill-card.blue,
+            .skill-card.purple,
+            .skill-card.gold,
+            .skill-card.deep {
+                background: #fff !important;
+                border: none !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+            }
+
+            .intro-card {
+                padding: 2px 0 0 !important;
+                margin-bottom: 6px !important;
+            }
+
+            .intro-card p {
+                margin: 0 !important;
+                color: #4b5e72 !important;
+                font-size: 9.8pt !important;
+                line-height: 1.58 !important;
+            }
+
+            .mini-card-wrap {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 8px !important;
+            }
+
+            .mini-card {
+                padding: 7px 8px !important;
+                background: #f8fbfd !important;
+                border: 1px solid #dce7ee !important;
+                border-radius: 6px !important;
+            }
+
+            .mini-card.purple {
+                background: #faf8fd !important;
+            }
+
+            .mini-card-label {
+                font-size: 7.5pt !important;
+                margin-bottom: 3px !important;
+            }
+
+            .mini-card p {
+                font-size: 8.5pt !important;
+                line-height: 1.46 !important;
+                color: #5a6c7d !important;
+            }
+
+            .timeline {
+                border-left: none !important;
+                padding-left: 0 !important;
+                margin-left: 0 !important;
+            }
+
+            .timeline-item {
+                margin: 0 !important;
+                padding: 8px 0 7px !important;
+                border-bottom: 1px dashed #d9e4ec !important;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .timeline-item:last-child {
+                border-bottom: none !important;
+                padding-bottom: 0 !important;
+            }
+
+            .timeline-item::before {
+                display: none !important;
+            }
+
+            .exp-head {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: flex-start !important;
+                gap: 10px !important;
+                margin-bottom: 4px !important;
+            }
+
+            .exp-company {
+                font-size: 10.4pt !important;
+                color: #172334 !important;
+                line-height: 1.35 !important;
+            }
+
+            .exp-date {
+                font-size: 8.8pt !important;
+                color: #5d7488 !important;
+                white-space: nowrap !important;
+            }
+
+            .badge-soft {
+                margin-top: 4px !important;
+                padding: 0 !important;
+                border: none !important;
+                background: transparent !important;
+                color: #4a88b3 !important;
+                font-size: 8.1pt !important;
+            }
+
+            .timeline-item ul {
+                margin: 5px 0 0 !important;
+                padding-left: 16px !important;
+                color: #4d6074 !important;
+                font-size: 9.4pt !important;
+                line-height: 1.5 !important;
+            }
+
+            .timeline-item li + li { margin-top: 1px !important; }
+
+            .skills-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                gap: 8px !important;
+            }
+
+            .skill-card {
+                padding: 8px 9px !important;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                border: 1px solid #dce7ee !important;
+                border-radius: 6px !important;
+                background: #fff !important;
+            }
+
+            .skill-head {
+                display: block !important;
+                margin-bottom: 4px !important;
+            }
+
+            .icon-box-new {
+                display: none !important;
+            }
+
+            .skill-card h4,
+            .skill-card.deep h4 {
+                margin: 0 !important;
+                color: #172334 !important;
+                font-size: 9.9pt !important;
+                line-height: 1.3 !important;
+            }
+
+            .skill-tags {
+                gap: 4px !important;
+                margin-bottom: 4px !important;
+            }
+
+            .skill-tags .badge,
+            .skill-card.deep .skill-tags .badge {
+                padding: 1px 6px !important;
+                border-radius: 999px !important;
+                background: #f3f9fc !important;
+                border: 1px solid #d7e5ed !important;
+                color: #557186 !important;
+                font-size: 7.6pt !important;
+            }
+
+            .skill-card p,
+            .skill-card.deep p {
+                margin: 0 !important;
+                color: #4b5e72 !important;
+                font-size: 8.9pt !important;
+                line-height: 1.46 !important;
             }
         }
     </style>
@@ -540,214 +947,229 @@
     <div class="resume-wrapper">
         <div class="hero-header">
             <div class="hero-content">
-                <div class="hero-badge"><i class="fas fa-sparkles"></i> Global Digital Marketing & SEO</div>
-                <h1>肖女士</h1>
+                <div class="hero-badge"><i class="fas fa-sparkles"></i> 独立站运营 / SEO / SEM</div>
+                <div class="hero-title-row">
+                    <h1>肖女士</h1>
+                    <div class="hero-exp"><i class="fas fa-briefcase"></i> 10+ Years Experience</div>
+                </div>
                 <p class="hero-subtitle">
-                    深耕互联网营销十余年，专注于 <strong>出海独立站搭建、搜索增长与广告投放优化</strong>。
-                    熟悉 WordPress 与 Shopify 建站生态，持续围绕 SEO、Google Ads 与 AI 工具提效，
-                    帮助业务在品牌展示、流量获取与线索转化之间形成更稳定的增长闭环。
+                    长期从事互联网营销与推广相关工作，当前主要围绕 <strong>出海独立站运营、SEO 优化与 SEM 投放</strong> 开展工作。
+                    熟悉 WordPress、Shopify、WooCommerce、Google Ads 等常用平台与工具，持续关注页面内容、搜索表现与询盘转化之间的协同。
                 </p>
                 <div class="header-meta">
-                    <div class="meta-item"><i class="fas fa-globe text-info"></i> www.xiaonvshi.com</div>
-                    <div class="meta-item"><i class="fas fa-envelope text-info"></i> lianxi@xiaonvshi.com</div>
-                    <div class="meta-item"><i class="fas fa-briefcase text-info"></i> 10+ Years Experience</div>
+                    <div class="meta-item"><i class="fas fa-globe text-info"></i><span class="meta-label">个人网站：</span><span class="meta-text">www.xiaonvshi.com</span></div>
+                    <div class="meta-item"><i class="fas fa-envelope text-info"></i><span class="meta-label">电子邮箱：</span><span class="meta-text">lianxi@xiaonvshi.com</span></div>
                 </div>
             </div>
         </div>
 
         <div class="content-body">
             <section class="section-block">
-                <div class="section-tag">Profile</div>
-                <h2 class="section-title"><i class="fas fa-user-circle"></i> 个人简介</h2>
-                <div class="intro-card">
-                    <p>
-                        长期专注于 <strong>海外独立站建设、SEO 自然流量增长、Google Ads 投放优化</strong> 与 <strong>AI 营销提效</strong>。
-                        擅长从网站结构、内容布局、搜索表现到转化路径进行系统梳理，
-                        让站点不只是完成搭建，更能在长期运营中持续产生曝光、询盘与增长价值。
-                    </p>
+                <div class="section-head">
+                    <div>
+                        <div class="section-tag">Profile</div>
+                        <h2 class="section-title"><i class="fas fa-user-circle"></i> 个人简介</h2>
+                    </div>
+                    <div class="section-note">目前工作重点以独立站运营、搜索优化和广告投放为主，偏向长期执行与持续优化型工作。</div>
+                </div>
+
+                <div class="intro-layout">
+                    <div class="intro-card">
+                        <p>
+                            长期从事网站运营与搜索推广相关工作，主要围绕 <strong>独立站搭建与维护、内容更新、SEO 优化、SEM 投放和询盘获取</strong> 展开。
+                            更关注实际执行中的页面结构、内容表达、收录表现和转化效率，重视可持续维护和长期积累。
+                        </p>
+                    </div>
+
+                    <div class="mini-card-wrap">
+                        <div class="mini-card">
+                            <div class="mini-card-label">当前工作</div>
+                            <p>目前主要围绕独立站内容更新、页面优化、搜索表现维护与广告投放调整开展工作。</p>
+                        </div>
+                        <div class="mini-card purple">
+                            <div class="mini-card-label">关注重点</div>
+                            <p>更关注页面结构是否清晰、内容是否匹配搜索需求，以及流量能否转化为有效询盘。</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section class="section-block">
-                <div class="section-tag">Experience</div>
-                <h2 class="section-title"><i class="fas fa-chart-line"></i> 工作经历</h2>
+                <div class="section-head">
+                    <div>
+                        <div class="section-tag">Experience</div>
+                        <h2 class="section-title"><i class="fas fa-chart-line"></i> 工作经历</h2>
+                    </div>
+                    <div class="section-note">经历主要集中在独立站运营、SEO 优化与竞价投放等方向，长期以执行、优化和数据反馈为主。</div>
+                </div>
+
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="exp-head">
                             <div>
                                 <div class="exp-company">某电气公司</div>
-                                <span class="badge-soft">Shopify & Ads</span>
+                                <span class="badge-soft">独立站运营 / Google Ads</span>
                             </div>
                             <div class="exp-date">2025 - PRESENT</div>
                         </div>
                         <ul>
-                            <li>负责 Shopify 独立站整体运营，围绕海外 B2B / B2C 市场规划内容、页面与获客策略。</li>
-                            <li>管理 Google Ads 账户，通过关键词优化、出价调整与素材测试持续提升询盘效率。</li>
+                            <li>负责 Shopify 独立站的日常维护与运营，结合产品和市场需求持续调整页面内容、站内结构与基础信息。</li>
+                            <li>管理 Google Ads 账户，跟进关键词表现、广告投放与询盘质量，配合站点优化提升获客效率。</li>
                         </ul>
                     </div>
+
                     <div class="timeline-item">
                         <div class="exp-head">
                             <div>
                                 <div class="exp-company">某服务中心</div>
-                                <span class="badge-soft">SEO 项目群运营</span>
+                                <span class="badge-soft">SEO 站点运营</span>
                             </div>
                             <div class="exp-date">2022 - 2024</div>
                         </div>
                         <ul>
-                            <li>运营多个跨行业站点，推动新站从冷启动到稳定流量增长，持续扩大搜索曝光。</li>
-                            <li>在 Bing 及主流搜索引擎中建立索引与排名优势，推进多个核心关键词实现突破。</li>
+                            <li>参与多个站点的内容更新、结构调整与日常运营，配合推进新站收录和基础流量增长。</li>
+                            <li>围绕关键词布局、页面内容与索引情况持续优化，提升站点在 Bing 及其他搜索引擎中的曝光表现。</li>
                         </ul>
                     </div>
+
                     <div class="timeline-item">
                         <div class="exp-head">
                             <div>
                                 <div class="exp-company">某网络公司</div>
-                                <span class="badge-soft">SEM 负责人</span>
+                                <span class="badge-soft">竞价推广 / SEO</span>
                             </div>
                             <div class="exp-date">2017 - 2020</div>
                         </div>
                         <ul>
-                            <li>负责竞价账户运营与预算管理，以 ROI 为导向持续优化投放结构与转化表现。</li>
-                            <li>结合 SEO 与 SEM 的协同策略，降低获客成本并提升自然流量与投放效率的整体表现。</li>
+                            <li>负责竞价账户的日常维护与投放调整，围绕关键词、预算和线索质量持续优化账户表现。</li>
+                            <li>参与网站 SEO 优化与内容调整工作，配合提升自然流量和整体获客效率。</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
             <section class="section-block">
-                <div class="section-tag">Skills Matrix</div>
-                <h2 class="section-title"><i class="fas fa-layer-group"></i> 专业能力</h2>
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="skill-card blue">
-                            <div class="skill-head">
-                                <div class="icon-box-new"><i class="fas fa-chart-line text-info"></i></div>
-                                <h4>SEO 增长体系</h4>
-                            </div>
-                            <div class="skill-tags">
-                                <span class="badge">关键词建模</span>
-                                <span class="badge">Technical SEO</span>
-                                <span class="badge">GSC 审计</span>
-                                <span class="badge">外链策略</span>
-                            </div>
-                            <p>从关键词布局、内容结构到技术优化，搭建更适合长期沉淀的自然流量体系。</p>
-                        </div>
+                <div class="section-head">
+                    <div>
+                        <div class="section-tag">Skills Matrix</div>
+                        <h2 class="section-title"><i class="fas fa-layer-group"></i> 专业能力</h2>
                     </div>
-                    <div class="col-md-6">
-                        <div class="skill-card purple">
-                            <div class="skill-head">
-                                <div class="icon-box-new"><i class="fab fa-google text-primary"></i></div>
-                                <h4>付费投放优化</h4>
-                            </div>
-                            <div class="skill-tags">
-                                <span class="badge">Google Ads</span>
-                                <span class="badge">ROI 测算</span>
-                                <span class="badge">百度竞价</span>
-                                <span class="badge">A/B Testing</span>
-                            </div>
-                            <p>以数据驱动账户优化，从关键词、素材到出价策略，持续提升投放效率与转化表现。</p>
+                    <div class="section-note">目前能力主要集中在 SEO、SEM、独立站运营以及 AI 搜索场景下的内容适配等方向。</div>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card blue">
+                        <div class="skill-head">
+                            <div class="icon-box-new"><i class="fas fa-chart-line text-info"></i></div>
+                            <h4>SEO</h4>
                         </div>
+                        <div class="skill-tags">
+                            <span class="badge">关键词布局</span>
+                            <span class="badge">页面标题</span>
+                            <span class="badge">内容优化</span>
+                            <span class="badge">链接结构</span>
+                        </div>
+                        <p>围绕关键词布局、页面标题、内容更新与链接结构进行持续优化，提升页面收录、理解与自然曝光表现。</p>
                     </div>
-                    <div class="col-md-6">
-                        <div class="skill-card gold">
-                            <div class="skill-head">
-                                <div class="icon-box-new"><i class="fas fa-code text-warning"></i></div>
-                                <h4>独立站搭建与优化</h4>
-                            </div>
-                            <div class="skill-tags">
-                                <span class="badge">WordPress / Shopify</span>
-                                <span class="badge">WooCommerce</span>
-                                <span class="badge">Elementor 二开</span>
-                                <span class="badge">响应式调优</span>
-                            </div>
-                            <p>兼顾页面展示、结构清晰度与用户体验，让站点更适合品牌表达与后续转化运营。</p>
+
+                    <div class="skill-card purple">
+                        <div class="skill-head">
+                            <div class="icon-box-new"><i class="fab fa-google text-primary"></i></div>
+                            <h4>SEM</h4>
                         </div>
+                        <div class="skill-tags">
+                            <span class="badge">Google Ads</span>
+                            <span class="badge">关键词投放</span>
+                            <span class="badge">广告结构</span>
+                            <span class="badge">出价调整</span>
+                        </div>
+                        <p>围绕关键词投放、广告结构与出价调整进行账户优化，持续关注点击质量、转化数据与询盘效果。</p>
                     </div>
-                    <div class="col-md-6">
-                        <div class="skill-card dark">
-                            <div class="skill-head">
-                                <div class="icon-box-new"><i class="fas fa-microchip text-success"></i></div>
-                                <h4>AI 营销提效</h4>
-                            </div>
-                            <div class="skill-tags">
-                                <span class="badge">Prompt Engineering</span>
-                                <span class="badge">AI 内容辅助</span>
-                                <span class="badge">流程提效</span>
-                                <span class="badge">信息整理</span>
-                            </div>
-                            <p>借助 AI 工具提升内容生产、素材整理与执行效率，让日常运营更轻量、更高效。</p>
+
+                    <div class="skill-card gold">
+                        <div class="skill-head">
+                            <div class="icon-box-new"><i class="fas fa-code text-warning"></i></div>
+                            <h4>独立站搭建与优化</h4>
                         </div>
+                        <div class="skill-tags">
+                            <span class="badge">WordPress</span>
+                            <span class="badge">Shopify</span>
+                            <span class="badge">WooCommerce</span>
+                            <span class="badge">Elementor</span>
+                        </div>
+                        <p>基于 WordPress、Shopify 与 WooCommerce 进行站点搭建和日常优化，兼顾页面展示、内容承载与后续维护效率。</p>
+                    </div>
+
+                    <div class="skill-card deep">
+                        <div class="skill-head">
+                            <div class="icon-box-new"><i class="fas fa-microchip text-success"></i></div>
+                            <h4>GEO</h4>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="badge">AI 搜索适配</span>
+                            <span class="badge">内容整理</span>
+                            <span class="badge">问答表达</span>
+                            <span class="badge">信息清晰度</span>
+                        </div>
+                        <p>结合生成式搜索和问答场景，优化内容表达、信息层级与页面可读性，使内容更容易被检索、理解和提取。</p>
                     </div>
                 </div>
             </section>
 
-            <section class="section-block">
-                <div class="section-tag">Digital Ecosystem</div>
-                <h2 class="section-title"><i class="fas fa-network-wired"></i> 个人运营站点</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <a href="https://huilv.xiaonvshi.com/" class="site-card" target="_blank">
-                            <div class="site-icon">💱</div>
-                            <div class="site-info">
-                                <h5>实时汇率查询</h5>
-                                <p>提供多币种兑换参考，便于外贸报价、结算换算与日常数据查询。</p>
-                            </div>
-                        </a>
+            <section class="section-block section-sites">
+                <div class="section-head">
+                    <div>
+                        <div class="section-tag">Digital Ecosystem</div>
+                        <h2 class="section-title"><i class="fas fa-network-wired"></i> 个人运营站点</h2>
                     </div>
-                    <div class="col-md-4">
-                        <a href="https://whois.xiaonvshi.com/" class="site-card" target="_blank">
-                            <div class="site-icon">🌐</div>
-                            <div class="site-info">
-                                <h5>Whois 域名查询</h5>
-                                <p>支持域名注册信息检索，适用于竞品分析、站点研究与基础信息判断。</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="https://erweima.xiaonvshi.com/" class="site-card" target="_blank">
-                            <div class="site-icon">🔳</div>
-                            <div class="site-info">
-                                <h5>二维码实验室</h5>
-                                <p>适用于多场景二维码生成与分发，方便连接网页、社媒与移动端入口。</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="https://tianqi.xiaonvshi.com/" class="site-card" target="_blank">
-                            <div class="site-icon">☁️</div>
-                            <div class="site-info">
-                                <h5>全球精准天气</h5>
-                                <p>提供多地区实时天气信息，可辅助出行、物流安排与时间判断。</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="https://wannianli.xiaonvshi.com/" class="site-card" target="_blank">
-                            <div class="site-icon">🗓</div>
-                            <div class="site-info">
-                                <h5>高效万年历</h5>
-                                <p>整合日期与节假日信息，便于内容规划、营销节点整理与日常查询。</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="https://lishishangdejintian.xiaonvshi.com/" class="site-card" target="_blank">
-                            <div class="site-icon">🕛</div>
-                            <div class="site-info">
-                                <h5>历史上的今天</h5>
-                                <p>沉淀内容灵感与热点素材，为社交平台更新和选题延展提供支持。</p>
-                            </div>
-                        </a>
-                    </div>
+                    <div class="section-note">基于实际运营需求持续搭建和维护的工具站点，用于服务内容生产、信息查询与场景应用。</div>
+                </div>
+
+                <div class="sites-grid">
+                    <a href="https://huilv.xiaonvshi.com/" class="site-card" target="_blank">
+                        <div class="site-icon">💱</div>
+                        <h5>实时汇率查询</h5>
+                        <p>提供多币种兑换参考，便于外贸报价、结算换算与日常数据查询。</p>
+                    </a>
+
+                    <a href="https://whois.xiaonvshi.com/" class="site-card" target="_blank">
+                        <div class="site-icon">🌐</div>
+                        <h5>Whois 域名查询</h5>
+                        <p>支持域名注册信息检索，适用于竞品分析、站点研究与基础信息判断。</p>
+                    </a>
+
+                    <a href="https://erweima.xiaonvshi.com/" class="site-card" target="_blank">
+                        <div class="site-icon">🔳</div>
+                        <h5>二维码实验室</h5>
+                        <p>适用于多场景二维码生成与分发，方便连接网页、社媒与移动端入口。</p>
+                    </a>
+
+                    <a href="https://tianqi.xiaonvshi.com/" class="site-card" target="_blank">
+                        <div class="site-icon">☁️</div>
+                        <h5>全球精准天气</h5>
+                        <p>提供多地区实时天气信息，可辅助出行、物流安排与时间判断。</p>
+                    </a>
+
+                    <a href="https://wannianli.xiaonvshi.com/" class="site-card" target="_blank">
+                        <div class="site-icon">🗓</div>
+                        <h5>高效万年历</h5>
+                        <p>整合日期与节假日信息，便于内容规划、营销节点整理与日常查询。</p>
+                    </a>
+
+                    <a href="https://lishishangdejintian.xiaonvshi.com/" class="site-card" target="_blank">
+                        <div class="site-icon">🕛</div>
+                        <h5>历史上的今天</h5>
+                        <p>沉淀内容灵感与热点素材，为社交平台更新和选题延展提供支持。</p>
+                    </a>
                 </div>
             </section>
 
             <footer class="text-center">
-                <p class="mb-1">专注于全球数字营销与搜索增长实战</p>
+                <p class="mb-1">长期从事独立站运营、搜索优化与推广相关工作</p>
                 <div class="footer-title">
                     Email: <a href="mailto:lianxi@xiaonvshi.com" class="text-decoration-none">lianxi@xiaonvshi.com</a>
                 </div>
-                <p class="mt-1 mb-0 small text-secondary">©2026 肖女士 版权所有</p>
+                <p class="mt-2 mb-0 small text-secondary">©2026 肖女士 版权所有</p>
             </footer>
         </div>
     </div>
