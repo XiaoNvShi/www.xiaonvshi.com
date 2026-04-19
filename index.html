@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>肖女士</title>
+    <title>肖女士｜独立站运营 / SEO / SEM</title>
     <meta name="keywords" content="肖女士, 独立站运营, 外贸独立站, SEO, SEM, Google Ads, WordPress, Shopify, WooCommerce, GEO">
     <meta name="description" content="长期从事独立站运营、SEO 优化与 SEM 投放相关工作，关注页面内容、搜索表现与询盘转化。">
     <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -28,19 +28,10 @@
       "@type": "Person",
       "name": "肖女士",
       "url": "https://www.xiaonvshi.com/",
-      "email": "lianxi@xiaonvshi.com",
+      "email": "mailto:lianxi@xiaonvshi.com",
       "jobTitle": "独立站运营 / SEO / SEM",
       "description": "长期从事独立站运营、SEO 优化与 SEM 投放相关工作，关注页面内容、搜索表现与询盘转化。",
-      "knowsAbout": [
-        "SEO",
-        "SEM",
-        "Google Ads",
-        "WordPress",
-        "Shopify",
-        "WooCommerce",
-        "Elementor",
-        "GEO"
-      ]
+      "knowsAbout": ["SEO", "SEM", "Google Ads", "WordPress", "Shopify", "WooCommerce", "Elementor", "GEO"]
     }
     </script>
 
@@ -60,7 +51,6 @@
             --blue-deep: #3f83b0;
             --purple: #8b84c4;
             --blue-soft: #eef8fc;
-            --purple-soft: #f6f2fb;
             --gold-soft: #fcfaf4;
             --hero-a: #18263a;
             --hero-b: #24364c;
@@ -101,6 +91,7 @@
             font-weight: 600;
             box-shadow: 0 14px 34px rgba(23,35,52,0.18);
             transition: transform .25s ease, box-shadow .25s ease;
+            cursor: pointer;
         }
 
         .btn-print:hover {
@@ -154,7 +145,8 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 760px;
+            width: 100%;
+            max-width: 100%;
         }
 
         .hero-badge {
@@ -206,7 +198,8 @@
         }
 
         .hero-subtitle {
-            max-width: 700px;
+            width: 100%;
+            max-width: 100%;
             margin: 0 0 20px;
             color: rgba(255,255,255,0.82);
             font-size: 1.02rem;
@@ -239,7 +232,9 @@
             padding: 38px 44px 40px;
         }
 
-        .section-block + .section-block { margin-top: 34px; }
+        .section-block + .section-block {
+            margin-top: 34px;
+        }
 
         .section-head {
             display: flex;
@@ -274,7 +269,9 @@
             letter-spacing: -.02em;
         }
 
-        .section-title i { color: var(--blue); }
+        .section-title i {
+            color: var(--blue);
+        }
 
         .section-note {
             color: var(--muted);
@@ -284,13 +281,10 @@
         }
 
         .intro-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1.18fr) minmax(250px, .82fr);
-            gap: 18px;
+            display: block;
         }
 
         .intro-card,
-        .mini-card,
         .timeline-item,
         .skill-card,
         .site-card {
@@ -312,38 +306,8 @@
             color: #4f6176;
         }
 
-        .intro-card strong { color: var(--title); }
-
-        .mini-card-wrap {
-            display: grid;
-            gap: 12px;
-        }
-
-        .mini-card {
-            padding: 18px 18px 16px;
-            background: linear-gradient(135deg, var(--blue-soft) 0%, #fff 100%);
-        }
-
-        .mini-card.purple {
-            background: linear-gradient(135deg, var(--purple-soft) 0%, #fff 100%);
-        }
-
-        .mini-card-label {
-            font-size: .76rem;
-            color: var(--blue-deep);
-            text-transform: uppercase;
-            letter-spacing: .08em;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .mini-card.purple .mini-card-label { color: #7a73b5; }
-
-        .mini-card p {
-            margin: 0;
-            color: #55667a;
-            line-height: 1.75;
-            font-size: .91rem;
+        .intro-card strong {
+            color: var(--title);
         }
 
         .timeline {
@@ -359,7 +323,9 @@
             padding: 20px 22px 18px;
         }
 
-        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
 
         .timeline-item::before {
             content: "";
@@ -477,7 +443,9 @@
         }
 
         .skill-card.deep h4,
-        .skill-card.deep p { color: #fff; }
+        .skill-card.deep p {
+            color: #fff;
+        }
 
         .skill-tags {
             display: flex;
@@ -566,8 +534,15 @@
             border-top: 1px solid var(--line);
         }
 
-        footer p { margin-bottom: 0; color: #6f7d8d; }
-        .footer-title { font-weight: 700; color: var(--title); }
+        footer p {
+            margin-bottom: 0;
+            color: #6f7d8d;
+        }
+
+        .footer-title {
+            font-weight: 700;
+            color: var(--title);
+        }
 
         @media (max-width: 991px) {
             body { padding: 24px 0 42px; }
@@ -577,7 +552,6 @@
             .hero-content { max-width: 100%; }
             .hero-header h1 { font-size: 3rem; }
             .hero-subtitle { max-width: 100%; }
-            .intro-layout { grid-template-columns: 1fr; }
             .section-block + .section-block { margin-top: 30px; }
             .section-head { margin-bottom: 16px; }
             .sites-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -598,11 +572,8 @@
             .section-head { margin-bottom: 14px; }
             .section-note { font-size: .9rem; }
             .section-block + .section-block { margin-top: 24px; }
-            .intro-layout { gap: 14px; }
             .intro-card { padding: 20px 18px; }
             .intro-card p { font-size: .96rem; line-height: 1.84; }
-            .mini-card-wrap { gap: 10px; }
-            .mini-card { padding: 16px; }
             .timeline { padding-left: 18px; margin-left: 2px; }
             .timeline-item { padding: 16px 14px 14px; border-radius: 16px; }
             .timeline-item::before { left: -28px; top: 22px; width: 11px; height: 11px; box-shadow: 0 0 0 4px rgba(91,168,214,0.12); }
@@ -805,7 +776,6 @@
             }
 
             .intro-card,
-            .mini-card,
             .timeline-item,
             .skill-card,
             .skill-card.blue,
@@ -828,34 +798,6 @@
                 color: #4b5e72 !important;
                 font-size: 9.8pt !important;
                 line-height: 1.58 !important;
-            }
-
-            .mini-card-wrap {
-                display: grid !important;
-                grid-template-columns: 1fr 1fr !important;
-                gap: 8px !important;
-            }
-
-            .mini-card {
-                padding: 7px 8px !important;
-                background: #f8fbfd !important;
-                border: 1px solid #dce7ee !important;
-                border-radius: 6px !important;
-            }
-
-            .mini-card.purple {
-                background: #faf8fd !important;
-            }
-
-            .mini-card-label {
-                font-size: 7.5pt !important;
-                margin-bottom: 3px !important;
-            }
-
-            .mini-card p {
-                font-size: 8.5pt !important;
-                line-height: 1.46 !important;
-                color: #5a6c7d !important;
             }
 
             .timeline {
@@ -918,7 +860,9 @@
                 line-height: 1.5 !important;
             }
 
-            .timeline-item li + li { margin-top: 1px !important; }
+            .timeline-item li + li {
+                margin-top: 1px !important;
+            }
 
             .skills-grid {
                 display: grid !important;
@@ -978,7 +922,6 @@
     </style>
 </head>
 <body>
-
     <button class="btn-print" onclick="window.print()"><i class="fas fa-print me-2"></i>打印/保存PDF</button>
 
     <div class="resume-wrapper">
@@ -1016,17 +959,6 @@
                             长期从事网站运营与搜索推广相关工作，主要围绕 <strong>独立站搭建与维护、内容更新、SEO 优化、SEM 投放和询盘获取</strong> 展开。
                             更关注实际执行中的页面结构、内容表达、收录表现和转化效率，重视可持续维护和长期积累。
                         </p>
-                    </div>
-
-                    <div class="mini-card-wrap">
-                        <div class="mini-card">
-                            <div class="mini-card-label">当前工作</div>
-                            <p>目前主要围绕独立站内容更新、页面优化、搜索表现维护与广告投放调整开展工作。</p>
-                        </div>
-                        <div class="mini-card purple">
-                            <div class="mini-card-label">关注重点</div>
-                            <p>更关注页面结构是否清晰、内容是否匹配搜索需求，以及流量能否转化为有效询盘。</p>
-                        </div>
                     </div>
                 </div>
             </section>
