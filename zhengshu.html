@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <title>Google 官方认证证书 - 肖女士</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #e8eaed;
+      --blue: #4285f4;
+      --red: #ea4335;
+      --yellow: #fbbc04;
+      --green: #34a853;
+      --shadow: 0 18px 50px rgba(60, 64, 67, 0.12);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 10%, rgba(66, 133, 244, 0.12), transparent 28%),
+        radial-gradient(circle at 88% 12%, rgba(251, 188, 4, 0.16), transparent 26%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 58%, #ffffff 100%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      line-height: 1.65;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 40px));
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 34px;
+      padding: clamp(34px, 5vw, 58px);
+      text-align: center;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: linear-gradient(90deg, var(--blue), var(--red), var(--yellow), var(--green));
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding: 8px 15px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 5px rgba(52, 168, 83, 0.12);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+    }
+
+    .holder {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 500;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .cert-card {
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 36px rgba(60, 64, 67, 0.10);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 56px rgba(60, 64, 67, 0.16);
+    }
+
+    .cert-image-wrap {
+      padding: 14px;
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cert-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      background: #ffffff;
+      border: 1px solid var(--line);
+    }
+
+    .cert-body {
+      padding: 22px 22px 24px;
+    }
+
+    .cert-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 6px 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      background: #f1f3f4;
+      border-radius: 999px;
+    }
+
+    .cert-tag::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .cert-card:nth-child(2) .cert-tag::before {
+      background: var(--green);
+    }
+
+    .cert-card:nth-child(3) .cert-tag::before {
+      background: var(--yellow);
+    }
+
+    .cert-body h2 {
+      margin: 0 0 18px;
+      font-size: 22px;
+      line-height: 1.28;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .cert-meta {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 18px 0 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 12px;
+      align-items: start;
+      font-size: 14px;
+    }
+
+    .meta-row dt {
+      margin: 0;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .meta-row dd {
+      margin: 0;
+      color: var(--text);
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    footer {
+      margin-top: 38px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: var(--text);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1080px) {
+      .cert-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 24px, 1180px);
+        padding: 28px 0 46px;
+      }
+
+      .hero {
+        border-radius: 24px;
+        padding: 30px 20px;
+      }
+
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .cert-image-wrap {
+        padding: 10px;
+      }
+
+      .cert-body {
+        padding: 20px;
+      }
+
+      .meta-row {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">Google Certified</div>
+      <h1>Google 官方认证证书</h1>
+      <p class="holder">Lili Xiao</p>
+    </header>
+
+    <section class="cert-grid" aria-label="Google 官方认证证书列表">
+      <article class="cert-card">
+        <div class="cert-image-wrap">
+          <img class="cert-image" src="https://www.xiaonvshi.com/assets/GoogleAnalyticsCertification.png" alt="Lili Xiao Google Analytics Certification 证书" />
+        </div>
+        <div class="cert-body">
+          <span class="cert-tag">Analytics</span>
+          <h2>Google Analytics Certification</h2>
+          <dl class="cert-meta">
+            <div class="meta-row">
+              <dt>持证人</dt>
+              <dd>Lili Xiao</dd>
+            </div>
+            <div class="meta-row">
+              <dt>签发日期</dt>
+              <dd>April 25, 2026</dd>
+            </div>
+            <div class="meta-row">
+              <dt>有效期至</dt>
+              <dd>April 25, 2027</dd>
+            </div>
+            <div class="meta-row">
+              <dt>证书编号</dt>
+              <dd>180698361</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="cert-card">
+        <div class="cert-image-wrap">
+          <img class="cert-image" src="https://www.xiaonvshi.com/assets/GoogleAdsSearchCertification.png" alt="Lili Xiao Google Ads Search Certification 证书" />
+        </div>
+        <div class="cert-body">
+          <span class="cert-tag">Search Ads</span>
+          <h2>Google Ads Search Certification</h2>
+          <dl class="cert-meta">
+            <div class="meta-row">
+              <dt>持证人</dt>
+              <dd>Lili Xiao</dd>
+            </div>
+            <div class="meta-row">
+              <dt>签发日期</dt>
+              <dd>April 24, 2026</dd>
+            </div>
+            <div class="meta-row">
+              <dt>有效期至</dt>
+              <dd>April 24, 2027</dd>
+            </div>
+            <div class="meta-row">
+              <dt>证书编号</dt>
+              <dd>180610112</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="cert-card">
+        <div class="cert-image-wrap">
+          <img class="cert-image" src="https://www.xiaonvshi.com/assets/GoogleAdsDisplayCertification.png" alt="Lili Xiao Google Ads Display Certification 证书" />
+        </div>
+        <div class="cert-body">
+          <span class="cert-tag">Display Ads</span>
+          <h2>Google Ads Display Certification</h2>
+          <dl class="cert-meta">
+            <div class="meta-row">
+              <dt>持证人</dt>
+              <dd>Lili Xiao</dd>
+            </div>
+            <div class="meta-row">
+              <dt>签发日期</dt>
+              <dd>April 25, 2026</dd>
+            </div>
+            <div class="meta-row">
+              <dt>有效期至</dt>
+              <dd>April 25, 2027</dd>
+            </div>
+            <div class="meta-row">
+              <dt>证书编号</dt>
+              <dd>180698976</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="current-year"></span> <a href="https://www.xiaonvshi.com" target="_blank" rel="noopener">肖女士</a> 版权所有 </p>
+    </footer>
+
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+  </main>
+</body>
+</html>
